@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publisher Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r flex flex-col p-4">
+      <div class="mb-8">
+        <span class="text-lg font-bold">Find</span>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>Explore</li>
+          <li>Spotlight</li>
+          <li>Trending</li>
+          <li>MCP Servers</li>
+          <li>MCP Generator</li>
+        </ul>
+      </div>
+      <div class="mb-8">
+        <ul class="space-y-2 text-gray-700">
+          <li>Publishers <span class="text-xs text-gray-400">100k+</span></li>
+          <li>Workspaces <span class="text-xs text-gray-400">200k+</span></li>
+          <li>Collections <span class="text-xs text-gray-400">500k+</span></li>
+          <li>Flows <span class="text-xs text-gray-400">4k+</span></li>
+          <li>Categories</li>
+        </ul>
+      </div>
+      <div class="mb-8">
+        <span class="text-lg font-bold">Publish</span>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>Profile</li>
+          <li>Dashboard</li>
+          <li>Workspaces</li>
+          <li>Analytics</li>
+        </ul>
+      </div>
+      <div class="mb-8">
+        <ul class="space-y-2 text-gray-700">
+          <li>Settings</li>
+          <li>Public Workspace</li>
+          <li>Run in Postman Button</li>
+        </ul>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 p-10">
+      <!-- Breadcrumbs -->
+      <nav class="text-sm text-gray-500 mb-6">
+        API Network / Publishers / Acme / <span class="text-gray-900 font-semibold">Dashboard</span>
+      </nav>
+      <!-- Header -->
+      <div class="flex items-center mb-8">
+        <h1 class="text-2xl font-bold mr-2">Publisher Dashboard</h1>
+
+      </div>
+      <!-- Publisher Info Section -->
+      <div class="flex items-center justify-between bg-white shadow-lg rounded-xl p-6 mb-10 border border-blue-100">
+        <div class="flex items-center">
+          <!-- Company Icon -->
+          <div class="w-14 h-14 bg-blue-100 flex items-center justify-center rounded-full mr-5">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="16" fill="#3B82F6"/>
+              <text x="16" y="22" text-anchor="middle" fill="white" font-size="16" font-family="Arial" font-weight="bold">A</text>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center">
+              <span class="text-xl font-bold mr-2">ACME</span>
+              <!-- Blue Checkmark Icon -->
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="text-sm text-gray-500 mt-1">All your favorite ACME APIs in one place.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-2 px-5 rounded shadow-none">View Profile</button>
+          <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded shadow">Edit Publisher Profile</button>
+        </div>
+      </div>
+      <!-- Metrics and Growth Tools -->
+      <div class="flex mb-10 gap-10">
+        <div class="flex-1">
+          <h2 class="font-semibold mb-4">Metrics</h2>
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Chart 1: Collection Views -->
+            <div class="bg-white border-4 border-gray-200 rounded-lg flex flex-col items-center p-4 shadow">
+              <svg width="120" height="80" viewBox="0 0 120 80">
+                <rect x="10" y="40" width="15" height="30" fill="#f97316"/>
+                <rect x="30" y="30" width="15" height="40" fill="#64748b"/>
+                <rect x="50" y="20" width="15" height="50" fill="#a3e635"/>
+                <rect x="70" y="35" width="15" height="35" fill="#3b82f6"/>
+                <rect x="90" y="25" width="15" height="45" fill="#22c55e"/>
+              </svg>
+              <span class="mt-2 text-sm font-medium text-gray-700">Collection Views</span>
+            </div>
+            <!-- Chart 2: API Calls -->
+            <div class="bg-white border-4 border-gray-200 rounded-lg flex flex-col items-center p-4 shadow">
+              <svg width="120" height="80" viewBox="0 0 120 80">
+                <polyline points="10,70 30,50 50,60 70,30 90,40 110,20" fill="none" stroke="#3b82f6" stroke-width="4"/>
+                <circle cx="10" cy="70" r="3" fill="#3b82f6"/>
+                <circle cx="30" cy="50" r="3" fill="#3b82f6"/>
+                <circle cx="50" cy="60" r="3" fill="#3b82f6"/>
+                <circle cx="70" cy="30" r="3" fill="#3b82f6"/>
+                <circle cx="90" cy="40" r="3" fill="#3b82f6"/>
+                <circle cx="110" cy="20" r="3" fill="#3b82f6"/>
+              </svg>
+              <span class="mt-2 text-sm font-medium text-gray-700">API Calls</span>
+            </div>
+            <!-- Chart 3: Error Rate -->
+            <div class="bg-white border-4 border-gray-200 rounded-lg flex flex-col items-center p-4 shadow">
+              <svg width="120" height="80" viewBox="0 0 120 80">
+                <rect x="20" y="60" width="20" height="15" fill="#ef4444"/>
+                <rect x="50" y="50" width="20" height="25" fill="#facc15"/>
+                <rect x="80" y="30" width="20" height="45" fill="#22d3ee"/>
+              </svg>
+              <span class="mt-2 text-sm font-medium text-gray-700">Error Rate</span>
+            </div>
+            <!-- Chart 4: Active Users -->
+            <div class="bg-white border-4 border-gray-200 rounded-lg flex flex-col items-center p-4 shadow">
+              <svg width="120" height="80" viewBox="0 0 120 80">
+                <ellipse cx="60" cy="40" rx="40" ry="30" fill="#a3e635"/>
+                <ellipse cx="60" cy="40" rx="25" ry="18" fill="#fbbf24"/>
+                <ellipse cx="60" cy="40" rx="12" ry="8" fill="#3b82f6"/>
+              </svg>
+              <span class="mt-2 text-sm font-medium text-gray-700">Active Users</span>
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto">
+          <h2 class="font-semibold mb-4">Growth tools</h2>
+          <div class="flex flex-col gap-3">
+            <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded">New Notebook</button>
+            <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded">Post an Update</button>
+            <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded">Generate Button</button>
+          </div>
+        </div>
+      </div>
+      <!-- Recent Comments -->
+      <div class="mb-10">
+        <h2 class="font-semibold mb-4">Recent comments and reactions</h2>
+        <ul class="space-y-3">
+          <li class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar" class="w-8 h-8 rounded-full mr-3">
+              <div>
+                <div>"The new authentication endpoint made integrating OAuth so much easier!"</div>
+                <div class="text-xs text-gray-400">2024-07-08 09:15 AM</div>
+              </div>
+            </div>
+            <a href="#" class="text-xs text-blue-600 underline ml-4">view</a>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar" class="w-8 h-8 rounded-full mr-3">
+              <div>
+                <div>"Loving the detailed API docs—made onboarding a breeze."</div>
+                <div class="text-xs text-gray-400">2024-07-08 08:47 AM</div>
+              </div>
+            </div>
+            <a href="#" class="text-xs text-blue-600 underline ml-4">view</a>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Avatar" class="w-8 h-8 rounded-full mr-3">
+              <div>
+                <div>"The response times are fantastic, our app feels much faster now."</div>
+                <div class="text-xs text-gray-400">2024-07-07 05:22 PM</div>
+              </div>
+            </div>
+            <a href="#" class="text-xs text-blue-600 underline ml-4">view</a>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Avatar" class="w-8 h-8 rounded-full mr-3">
+              <div>
+                <div>"Appreciate the new webhook support—real-time updates are a game changer!"</div>
+                <div class="text-xs text-gray-400">2024-07-07 11:03 AM</div>
+              </div>
+            </div>
+            <a href="#" class="text-xs text-blue-600 underline ml-4">view</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Workspaces and Collections -->
+      <div>
+        <h2 class="font-semibold mb-4">Workspaces and collections</h2>
+        <div class="bg-white rounded-xl shadow p-6 w-full max-w-2xl">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <span class="text-blue-600 font-semibold">Acme Public Workspace</span>
+              <span class="ml-2 text-xs text-gray-500">517 Watchers</span>
+            </div>
+            <div class="flex gap-2">
+              <button id="toggle-workspace" class="border px-3 py-1 rounded text-gray-700 text-sm">View Contents</button>
+              <button class="border px-3 py-1 rounded text-gray-700 text-sm">Manage</button>
+            </div>
+          </div>
+          <div class="text-gray-700 text-sm mb-2">Discover the Postman API and other collections that will enable you to accomplish a lot of your API workflows programmatically.</div>
+          <div class="flex items-center text-xs text-gray-500 mb-2">
+            <span>Updated <span class="font-semibold text-gray-700">Jul 08, 2024</span></span>
+          </div>
+          <div id="workspace-details" class="hidden border-t pt-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="font-semibold">Postman API MCP Server</span>
+                <span class="ml-2 text-xs text-gray-500">This collection includes requests for interacting with the official Postman API MCP server.</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="text-gray-500 text-xs flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>Fork 12</button>
+                <button class="border px-2 py-1 rounded text-gray-700 text-xs">Manage</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html> 
